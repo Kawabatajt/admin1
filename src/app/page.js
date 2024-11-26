@@ -1,101 +1,128 @@
-import Image from "next/image";
-
+// import Image from "next/image";
+// import backgroundImage from "/Users/user/admin1/public/Shape.jpg";
+// import { getImageProps } from "next/image";
+import "./style.css";
+import { Cardo, Syne, Urbanist } from "next/font/google";
+import { Montserrat } from "next/font/google";
+import { Inter } from "next/font/google";
+const syne = Syne({ subsets: ["latin"], weight: "700" });
+const montserrat = Montserrat({ subsets: ["latin"], weight: "400" });
+const inter = Inter({ subsets: ["latin"], weight: "300" });
 export default function Home() {
+  const users = [
+    {
+      id: 1,
+      firstName: "Marian",
+      lastName: "Dixsee",
+      email: "mdixsee0@nba.com",
+      companyName: "Blogtags",
+      phoneNumber: "412-530-2249",
+      address: "62 Meadow Ridge Plaza",
+    },
+    {
+      id: 2,
+      firstName: "Coleman",
+      lastName: "Oxbie",
+      email: "coxbie1@oaic.gov.au",
+      companyName: "Fatz",
+      phoneNumber: "592-295-2012",
+      address: "18 Macpherson Place",
+    },
+    {
+      id: 3,
+      firstName: "Allx",
+      lastName: "Tomasian",
+      email: "atomasian2@cafepress.com",
+      companyName: "Abata",
+      phoneNumber: "741-828-1962",
+      address: "42040 Ridgeway Trail",
+    },
+    {
+      id: 4,
+      firstName: "Jarrett",
+      lastName: "Randales",
+      email: "jrandales3@wiley.com",
+      companyName: "Vidoo",
+      phoneNumber: "401-321-9934",
+      address: "595 Lakewood Street",
+    },
+    {
+      id: 5,
+      firstName: "Mora",
+      lastName: "Tildesley",
+      email: "mtildesley4@privacy.gov.au",
+      companyName: "Shuffletag",
+      phoneNumber: "254-913-7925",
+      address: "7 Little Fleur Point",
+    },
+    {
+      id: 6,
+      firstName: "Livvyy",
+      lastName: "Crankhorn",
+      email: "lcrankhorn5@google.com.br",
+      companyName: "Fivespan",
+      phoneNumber: "589-951-2909",
+      address: "23524 Thackeray Street",
+    },
+    {
+      id: 7,
+      firstName: "Erwin",
+      lastName: "LLelweln",
+      email: "ellelweln6@de.vu",
+      companyName: "Cogibox",
+      phoneNumber: "105-760-3548",
+      address: "20 Cardinal Pass",
+    },
+    {
+      id: 8,
+      firstName: "Jourdain",
+      lastName: "Leban",
+      email: "jleban7@is.gd",
+      companyName: "Layo",
+      phoneNumber: "124-860-5889",
+      address: "77 Fair Oaks Court",
+    },
+    {
+      id: 9,
+      firstName: "Christy",
+      lastName: "Van Der Straaten",
+      email: "cvanderstraaten8@dailymail.co.uk",
+      companyName: "Linktype",
+      phoneNumber: "460-169-0338",
+      address: "94749 Mendota Circle",
+    },
+    {
+      id: 10,
+      firstName: "Jehanna",
+      lastName: "Cleobury",
+      email: "jcleobury9@huffingtonpost.com",
+      companyName: "Flashpoint",
+      phoneNumber: "396-811-4137",
+      address: "3759 Oak Valley Park",
+    },
+  ];
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.js
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <div className="card">
+      <div>
+        <div>
+          <div className="names">
+            <h1 className={syne.className}>{users[0].firstName}</h1>
+            <h2 className={syne.className}>{users[0].lastName}</h2>
+          </div>
+          <h3 className={montserrat.className}>Designer</h3>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+        <div className={inter.className}>
+          <p>{users[0].phoneNumber}</p>
+          <p>{users[0].email}</p>
+          <p>{users[0].address}</p>
+        </div>
+      </div>
+      <div className="card-right">
+        <div className="logo"></div>
+        <h1 className={montserrat.className}>{users[0].companyName}</h1>
+        <h2 className={inter.className}>Tagline goes here</h2>
+        <div className="qr-code"></div>
+      </div>
     </div>
   );
 }

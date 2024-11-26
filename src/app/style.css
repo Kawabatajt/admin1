@@ -1,0 +1,74 @@
+.card {
+  display: flex;
+  width: 336px;
+  height: 192px;
+  border-radius: 10px;
+  background-color: rgb(255, 255, 255);
+  margin: 100px auto;
+  color: rgb(0, 0, 0);
+  position: relative;
+}
+.names {
+  display: flex;
+  gap: 5px;
+  font-size: 14px;
+  padding: 25px 27px;
+  padding-bottom: 0;
+}
+.names h1 {
+  color: rgb(0, 113, 188);
+}
+.names h2 {
+  color: rgb(247, 147, 30);
+}
+.card h3 {
+  padding-left: 27px;
+  font-size: 8px;
+  margin-bottom: 62px;
+}
+p {
+  font-size: 8px;
+  padding-left: 27px;
+}
+.background {
+  margin-left: 10px;
+}
+.card-right {
+  background-image: url("./images/background.png");
+  width: 160px;
+  height: 192px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  border-radius: 0 8px 8px 0;
+}
+.logo {
+  background-image: url("./images/Logo000\ 1.png");
+  background-size: cover;
+  background-position: center;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 25px;
+  left: 75px;
+}
+.card-right h1 {
+  color: white;
+  font-size: 10px;
+  width: 20px;
+  margin: 0 auto;
+  margin-top: 60px;
+}
+.card-right h2 {
+  color: white;
+  font-size: 8px;
+  padding-left: 58px;
+}
+.qr-code {
+  background-image: url("./images/qr.png");
+  background-size: cover;
+  width: 30px;
+  height: 30px;
+  margin-left: 80px;
+  margin-top: 40px;
+}
